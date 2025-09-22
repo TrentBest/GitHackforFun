@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FSM_WPF_MinesweeperFun
 {
@@ -23,6 +12,26 @@ namespace FSM_WPF_MinesweeperFun
         public ColorPickerPanel()
         {
             InitializeComponent();
+        }
+
+        private void QuickColor_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is string tag)
+            {
+                var colors = tag.Split(',');
+                if (colors.Length == 3)
+                {
+                    if (byte.TryParse(colors[0], out byte r) &&
+                        byte.TryParse(colors[1], out byte g) &&
+                        byte.TryParse(colors[2], out byte b))
+                    {
+                        // Set the color values to the text boxes
+                        RTextBox.Text = r.ToString();
+                        GTextBox.Text = g.ToString();
+                        BTextBox.Text = b.ToString();
+                    }
+                }
+            }
         }
     }
 }
