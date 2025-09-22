@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:FSM_WPF_MinesweeperFun"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
