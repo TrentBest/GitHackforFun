@@ -8,5 +8,30 @@
         mc:Ignorable="d"
         Title="3D Minesweeper" Height="800" Width="1000">
 
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
 
+    <Grid>
+        <h:Viewport3DX x:Name="viewPort"
+                       EffectsManager="{Binding EffectsManager}"
+                       Camera="{Binding Camera}"
+                       ShowCoordinateSystem="True">
+
+            <h:Viewport3DX.InputBindings>
+                <MouseBinding Gesture="RightClick" Command="{Binding UpYCommand}" />
+            </h:Viewport3DX.InputBindings>
+
+            <h:Viewport3DX.Children>
+                <h:AmbientLight3D Color="{Binding AmbientLightColor}" />
+                <h:DirectionalLight3D Color="{Binding DirectionalLightColor}" Direction="{Binding DirectionalLightDirection}" />
+
+                <h:LineGeometryModel3D Geometry="{Binding Grid}" 
+                                       Color="Gray" 
+                                       Thickness="0.1" 
+                                       Transform="{Binding GridTransform}" />
+            </h:Viewport3DX.Children>
+
+        </h:Viewport3DX>
+    </Grid>
 </Window>
