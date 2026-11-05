@@ -6,6 +6,7 @@
 </p>
 
 # GitHackforFun
+[![Sith Policy](assets/sith-policy.svg)](https://github.com/TrentBest/GitHackforFun/actions/workflows/sith-policy.yml)
 **3D Minesweeper: Because P2P State Shouldn't Be a Mess** 💥
 
 Welcome, fellow explorer\! This isn't just a 3D Minesweeper game; it's a testament to the **architectural imperative** of a **peer-to-peer** game loop. We've taken the core of our **FSM\_API**, the concept that state shouldn't be a mess, and applied it to a multiplayer, 3D environment using a new `FSM_Helix` package.
