@@ -12,7 +12,7 @@
   ],
   "branch_count": 3,
   "status": "NON-COMPLIANT",
-  "evaluated_at": "2026-11-17T13:19:59Z",
-  "workflow_run": "https://github.com/TrentBest/GitHackforFun/actions/runs/44091613456",
-  "triggering_commit": "e1224ebf1b98a9c938cee3043f478ab375a08008"
+  "evaluated_at": "2026-11-18T13:00:00Z",
+  "workflow_run": "https://github.com/TrentBest/GitHackforFun/actions/runs/44309233890",
+  "triggering_commit": "0120113fb9ad6034442d5308b702bf150fb0494f"
 }
